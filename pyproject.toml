@@ -1,0 +1,26 @@
+[project]
+name = "lexm-checker"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Robert L Quigley",email = "robert@logicaexmachina.dev"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pytest"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+#package-mode = false
+packages = [
+    { include = "lexm-checker", from = "src"}
+]
+
+[tool.pytest.ini_options]
+ pythonpath = ["src"]
