@@ -11,3 +11,16 @@ class TestUser:
         assert user.course is None
         assert full_user.username == "test"
         assert full_user.course == "course"
+
+    def test_comparison(selfs):
+        user1 = User("test", "course")
+        user2 = User("test", "course")
+        user3 = User()
+
+        assert user1 == user2
+        assert user1 != user3
+
+    def test_assign_section(self):
+        user = User("test", "course")
+        user.assign_section("CIS118")
+        assert user.section == "CIS118"
