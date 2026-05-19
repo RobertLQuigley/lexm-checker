@@ -1,7 +1,10 @@
-class Assignment:
-    def __init__(self, name):
-        self.name = name
-        self.rubric = ""
+from lexm_checker.models.rubric import Rubric
 
-    def add_rubric(self, rubric):
+
+class Assignment:
+    def __init__(self, name: str, rubric: Rubric | None = None):
+        self.name = name
+        self.rubric = rubric
+
+    def add_rubric(self, rubric: Rubric):
         self.rubric = rubric
